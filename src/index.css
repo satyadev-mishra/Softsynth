@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style-type: none;
+}
+body{
+  background-color: #eee;
+}
+:root{
+  --bg-color:#28394b;
+  --font-color:#d30231;
+}
+.bg-color{
+  background-color: var(--bg-color);
+}
+.font-color{
+  color:var(--font-color);
+}
+
+.chat-area::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.chat-area::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+  background:#505050;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  
+}
