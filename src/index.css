@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 li{
   list-style-type: none;
 }
@@ -36,4 +37,11 @@ body{
   border-radius: 10px;
   border: 2px solid #fff;
   
+}
+/* this active class is for navmenu which is active now*/
+.active{
+  background-color: var(--font-color);
+  padding: 0.5rem 0.7rem;
+  border-radius: 2rem;
+
 }

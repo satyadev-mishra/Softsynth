@@ -10,7 +10,7 @@ import {
   FaWhatsapp,
   FaRegEnvelope,
 } from "react-icons/fa";
-// import { a } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
@@ -75,23 +75,23 @@ const Navbar = () => {
 
       <div className="w-full fixed top-[87px] hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
         <ul className="flex items-center">
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-6 transition-all rounded-full">
-            <a to="/">Home</a>
+          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
+            <NavLink to="/">Home</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer  py-2 px-6 transition-all rounded-full">
-            <a to="/about">About</a>
+          <li className="hover:bg-[var(--font-color)] cursor-pointer  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/about">About</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-6 transition-all rounded-full">
-            <a to="/courses">Courses</a>
+          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
+            <NavLink to="/courses">Courses</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-6 transition-all rounded-full">
-            <a to="/internship">Apply internship</a>
+          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
+            <NavLink to="/internship">Apply internship</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-6 transition-all rounded-full">
-            <a to="/faq">Faq's</a>
+          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
+            <NavLink to="/faq">Faq's</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-6 transition-all rounded-full">
-            <a to="/contact">Contact Us</a>
+          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
+            <NavLink to="/contact">Contact Us</NavLink>
           </li>
         </ul>
         <div className="Social-icon hidden md:flex gap-2 md:gap-4 px-2">
@@ -133,23 +133,23 @@ const Navbar = () => {
         />
 
         <ul className="md:hidden flex flex-col px-2">
-          <li className="hover:bg-[var(--font-color)]  py-2 px-6 transition-all rounded-full">
-            <a to="/">Home</a>
+          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/">Home</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-6 transition-all rounded-full">
-            <a to="/about">About</a>
+          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/about">About</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-6 transition-all rounded-full">
-            <a to="/courses">Courses</a>
+          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/courses">Courses</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-6 transition-all rounded-full">
-            <a to="/internship">Apply internship</a>
+          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/internship">Apply internship</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-6 transition-all rounded-full">
-            <a to="/faq">Faq's</a>
+          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/faq">Faq's</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-6 transition-all rounded-full">
-            <a to="/contact">Contact Us</a>
+          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
+            <NavLink to="/contact">Contact Us</NavLink>
           </li>
         </ul>
 

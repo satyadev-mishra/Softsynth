@@ -1,13 +1,19 @@
 import './App.css'
+
+//Navbar....
 import Navbar from './component/navbar/Navbar';
-import Footer from './component/footer/Footer'
-// import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
+//Footer....
+import Footer from './component/footer/Footer';
+
+import { Outlet } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
     <Navbar/>
+    <Outlet/>
     <Footer/>
   
     </>
