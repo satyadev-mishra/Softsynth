@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <>
-      {/*------------------- top navbar---------------------------  */}
-
-      <div className="w-full bg-black flex justify-between py-2 px-4 sm:px-12 items-center sm:items-start fixed top-0">
+      {/*------------------- navbar start---------------------------  */}
+      <div className="sticky top-0 z-50 ">
+        <div className="w-full bg-black flex justify-between py-2 px-4 sm:px-12 items-center sm:items-start">
         <div>
           <img
             className="w-32 sm:w-28"
@@ -71,54 +71,87 @@ const Navbar = () => {
             onClick={showMobileNav}
           />
         )}
-      </div>
+        </div>
 
-      <div className="w-full fixed top-[87px] hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
-        <ul className="flex items-center">
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
-            <NavLink to="/">Home</NavLink>
+        <div className="w-full hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
+        <ul className="flex items-center gap-2 py-2">
+          <li>
+            <NavLink
+              to="/"
+              className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
+            >
+              Home
+            </NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/about">About</NavLink>
+          <li>
+            <NavLink
+              to="/about"
+              className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
+            >
+              About
+            </NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
-            <NavLink to="/courses">Courses</NavLink>
+          <li>
+            <NavLink
+              to="/courses"
+              className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
+            >
+              Courses
+            </NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
-            <NavLink to="/internship">Apply internship</NavLink>
+          <li>
+            <NavLink
+              to="/internship"
+              className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
+            >
+              Apply internship
+            </NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
-            <NavLink to="/faq">Faq's</NavLink>
+          <li>
+            <NavLink
+              to="/faq"
+              className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
+            >
+              Faq's
+            </NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full">
-            <NavLink to="/contact">Contact Us</NavLink>
+          <li>
+            <NavLink
+              to="/contact"
+              className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
+            >
+              Contact Us
+            </NavLink>
           </li>
         </ul>
         <div className="Social-icon hidden md:flex gap-2 md:gap-4 px-2">
           <a href="https://www.facebook.com/softsynth" target="_blank">
-            <FaFacebookF className="hover:text-black hover:ease-in-out duration-300 text-xl" />
+            <FaFacebookF className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
           <a
             href="https://www.instagram.com/softsynthsoftwaresolutions/"
             target="_blank"
           >
-            <FaInstagram className="hover:text-black hover:ease-in-out duration-300 text-xl" />
+            <FaInstagram className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
           <a
             href="https://www.linkedin.com/company/softsynth-software-solutions"
             target="_blank"
           >
-            <FaLinkedin className="hover:text-black hover:ease-in-out duration-300 text-xl" />
+            <FaLinkedin className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
           <a href="https://wa.me/919821121575" target="_blank">
-            <FaWhatsapp className="hover:text-black hover:ease-in-out duration-300 text-xl" />
+            <FaWhatsapp className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
           <a href="mailto:info@softsynthsoftfwaresolution.com" target="_blank">
-            <FaRegEnvelope className="hover:text-black hover:ease-in-out duration-300 text-xl" />
+            <FaRegEnvelope className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
         </div>
+        </div>
       </div>
-
+      {/*------------------- navbar end---------------------------  */}
+      
+      {/*------------------- Mobile navbar start---------------------------  */}
       <div
         className={
           isMobileNavOpen
@@ -130,26 +163,27 @@ const Navbar = () => {
           className="w-32 sm:w-28 ml-4"
           src={softsynthlogo}
           alt="softsynth logo"
+          
         />
 
-        <ul className="md:hidden flex flex-col px-2">
-          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/">Home</NavLink>
+        <ul className="md:hidden flex flex-col px-2 gap-6">
+          <li>
+            <NavLink to="/" onClick={showMobileNav}   className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">Home</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/about">About</NavLink>
+          <li>
+            <NavLink to="/about" onClick={showMobileNav} className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">About</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/courses">Courses</NavLink>
+          <li>
+            <NavLink to="/courses" onClick={showMobileNav} className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">Courses</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/internship">Apply internship</NavLink>
+          <li >
+            <NavLink to="/internship" onClick={showMobileNav} className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">Apply internship</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/faq">Faq's</NavLink>
+          <li>
+            <NavLink to="/faq" onClick={showMobileNav} className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">Faq's</NavLink>
           </li>
-          <li className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">
-            <NavLink to="/contact">Contact Us</NavLink>
+          <li>
+            <NavLink to="/contact" onClick={showMobileNav} className="hover:bg-[var(--font-color)]  py-2 px-4 transition-all rounded-full">Contact Us</NavLink>
           </li>
         </ul>
 
@@ -177,7 +211,8 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      
+      {/*------------------- Mobile navbar end---------------------------  */}
+
     </>
   );
 };

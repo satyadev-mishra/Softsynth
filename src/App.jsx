@@ -7,6 +7,7 @@ import Navbar from './component/navbar/Navbar';
 import Footer from './component/footer/Footer';
 
 import { Outlet } from 'react-router-dom';
+import MoveToTop from './component/MoveToTop/MoveToTop';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Navbar/>
     <Outlet/>
     <Footer/>
+    <MoveToTop/>
   
     </>
   )
