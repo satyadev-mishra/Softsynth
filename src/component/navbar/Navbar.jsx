@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import softsynthlogo from "../../images/softsynthlogo.png";
 import { IoLocationOutline, IoMenu, IoClose } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
@@ -11,6 +11,9 @@ import {
   FaRegEnvelope,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import gsap from "gsap";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
@@ -19,22 +22,97 @@ const Navbar = () => {
     setMobileNavOpen(!isMobileNavOpen);
   };
 
+  // **********Animation code****************//
+  const container = useRef(null)
+  const logo = useRef(null) 
+  const top_icon1 =useRef(null)
+  const top_icon2 = useRef(null)
+  const top_icon3 = useRef(null)
+  const bottom_menu1 = useRef(null)
+  const bottom_menu2 = useRef(null)
+  const bottom_menu3 = useRef(null)
+  const bottom_menu4 = useRef(null)
+  const bottom_menu5 = useRef(null)
+  const bottom_menu6 = useRef(null)
+  const social_icon1 = useRef(null)
+  const social_icon2 = useRef(null)
+  const social_icon3 = useRef(null)
+  const social_icon4 = useRef(null)
+  const social_icon5 = useRef(null)
+
+  useGSAP(()=>{
+    gsap.from(logo.current, {rotate:180, stagger: 0.1 });
+    gsap.to(logo.current,{rotate:0 , duration:.5 ,ease:"power4.Out"})
+    gsap.from([top_icon1.current  , top_icon2.current , top_icon3.current] , {
+      opacity:0,
+      y:'-200',
+      duration:1,
+      // ease:"power4.out",
+      stagger:.3
+    })
+    gsap.to([top_icon1.current  , top_icon2.current , top_icon3.current] ,{
+      opacity:1,
+      y:'0',
+      duration:1,
+      ease:"power4.out",
+      stagger:.5
+     
+      
+    })
+    // bottom navbar animation
+
+    gsap.from([bottom_menu1.current , bottom_menu2.current , bottom_menu3.current , bottom_menu4.current , bottom_menu5.current , bottom_menu6.current] , {
+      opacity:1,
+      // x:"30" ,
+      duration:1,
+      stagger:.2,
+      delay:2 , 
+      ease:'Power4.Out'
+    }
+      )
+    gsap.from([bottom_menu1.current , bottom_menu2.current , bottom_menu3.current , bottom_menu4.current , bottom_menu5.current , bottom_menu6.current] , {
+      opacity:0,
+      x:"0" ,
+      duration:1,
+      stagger:.2,
+      delay:1 , 
+      ease:'Power4.Out'
+    }
+      )
+    
+    gsap.from([social_icon1.current , social_icon2.current , social_icon3.current , social_icon4.current , social_icon5.current] ,{
+      y:'50',
+      opacity:0,
+      duration:.5,
+      stagger:.1,
+      delay:2,
+      ease:'Power4.Out'
+    })
+   
+      
+      
+    
+  },{scope:container})
+
   return (
     <>
-      {/*------------------- navbar start---------------------------  */}
+    {/*------------------- both navbar start---------------------------  */}
+
+      {/*------------------- top navbar start---------------------------  */}
       <div className="sticky top-0 z-50 ">
         <div className="w-full bg-black flex justify-between py-2 px-4 sm:px-12 items-center sm:items-start">
         <div>
           <img
+            ref={logo}
             className="w-32 sm:w-28"
             src={softsynthlogo}
             alt="softsynth logo"
           />
         </div>
 
-        <div className="hidden sm:flex items-start gap-2 text-white">
-          <div className="flex item-center">
-            <IoLocationOutline className="text-[40px] text-[var(--font-color)]" />
+        <div  className="hidden sm:flex items-start gap-2 text-white">
+          <div  className="flex item-center" ref={top_icon1}>
+            <IoLocationOutline   className="text-[40px] text-[var(--font-color)]" />
             <div>
               <h1 className="text-xl">Address</h1>
               <p className="text-sm">SCF-165, First Floor,</p>
@@ -42,7 +120,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex">
+          <div ref={top_icon2} className="flex" >
             <HiOutlineDevicePhoneMobile className="text-[40px] text-[var(--font-color)]" />
             <div>
               <h2 className="text-xl">Call Us Now</h2>
@@ -51,7 +129,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex">
+          <div className="flex" ref={top_icon3}>
             <HiOutlineMail className="text-[40px] text-[var(--font-color)] mr-1" />
             <div>
               <h2 className="text-xl">Email Us</h2>
@@ -72,10 +150,13 @@ const Navbar = () => {
           />
         )}
         </div>
+      {/*------------------- top navbar end---------------------------  */}
+   
+      {/*------------------- bottom navbar start---------------------------  */}
 
-        <div className="w-full hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
+        <div  className="w-full hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
         <ul className="flex items-center gap-2 py-2">
-          <li>
+          <li ref={bottom_menu1}>
             <NavLink
               to="/"
               className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
@@ -83,7 +164,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          <li ref={bottom_menu2}>
             <NavLink
               to="/about"
               className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
@@ -91,7 +172,7 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-          <li>
+          <li ref={bottom_menu3}>
             <NavLink
               to="/courses"
               className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
@@ -99,7 +180,7 @@ const Navbar = () => {
               Courses
             </NavLink>
           </li>
-          <li>
+          <li ref={bottom_menu4}>
             <NavLink
               to="/internship"
               className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
@@ -107,7 +188,7 @@ const Navbar = () => {
               Apply internship
             </NavLink>
           </li>
-          <li>
+          <li ref={bottom_menu5}>
             <NavLink
               to="/faq"
               className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
@@ -115,7 +196,7 @@ const Navbar = () => {
               Faq's
             </NavLink>
           </li>
-          <li>
+          <li ref={bottom_menu6}>
             <NavLink
               to="/contact"
               className="hover:bg-[var(--font-color)] cursor-pointer py-2 px-4 transition-all rounded-full"
@@ -125,31 +206,43 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="Social-icon hidden md:flex gap-2 md:gap-4 px-2">
-          <a href="https://www.facebook.com/softsynth" target="_blank">
+          <a
+           ref={social_icon1} 
+           href="https://www.facebook.com/softsynth" 
+           target="_blank">
             <FaFacebookF className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
           <a
+            ref={social_icon2}
             href="https://www.instagram.com/softsynthsoftwaresolutions/"
             target="_blank"
           >
             <FaInstagram className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
           <a
+            ref={social_icon3}
             href="https://www.linkedin.com/company/softsynth-software-solutions"
             target="_blank"
           >
             <FaLinkedin className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
-          <a href="https://wa.me/919821121575" target="_blank">
+          <a
+            ref={social_icon4}
+            href="https://wa.me/919821121575" 
+            target="_blank">
             <FaWhatsapp className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
-          <a href="mailto:info@softsynthsoftfwaresolution.com" target="_blank">
+          <a
+            ref={social_icon5}
+            href="mailto:info@softsynthsoftfwaresolution.com" target="_blank">
             <FaRegEnvelope className="hover:scale-150 hover:ease-in-out duration-300 text-xl" />
           </a>
         </div>
         </div>
       </div>
-      {/*------------------- navbar end---------------------------  */}
+      {/*------------------- bottom navbar end---------------------------  */}
+
+      {/*------------------- both navbar end---------------------------  */}
       
       {/*------------------- Mobile navbar start---------------------------  */}
       <div
