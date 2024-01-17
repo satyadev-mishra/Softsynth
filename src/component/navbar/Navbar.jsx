@@ -41,8 +41,15 @@ const Navbar = () => {
   const social_icon5 = useRef(null)
 
   useGSAP(()=>{
-    gsap.from(logo.current, {rotate:180, stagger: 0.1 });
-    gsap.to(logo.current,{rotate:0 , duration:.5 ,ease:"power4.Out"})
+    gsap.from(logo.current, {
+      opacity:0,
+      y:'100',
+       stagger: 0.1 });
+    gsap.to(logo.current,{
+      opacity:1 , 
+      y:0,
+      duration:1 ,
+      ease:"power4.Out"})
     gsap.from([top_icon1.current  , top_icon2.current , top_icon3.current] , {
       opacity:0,
       y:'-200',
