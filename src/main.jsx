@@ -8,6 +8,7 @@ import Courses from './component/pages/Courses';
 import ApplyInternship from './component/pages/ApplyInternship';
 import Faq from './component/pages/Faq';
 import ContactUs from './component/pages/ContactUs';
+import PageNotFound from './component/pages/PageNotFound.jsx';
 import './index.css'
 import {createBrowserRouter,
   createRoutesFromElements,
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="courses" element={<Courses/>}/>
       <Route path="faq" element={<Faq/>}/>
       <Route path="contact" element={<ContactUs/>}/>
+      <Route path="*" element={<PageNotFound/>}/>
     </Route>
   )
 )

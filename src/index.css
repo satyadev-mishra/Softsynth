@@ -44,9 +44,7 @@ body::-webkit-scrollbar-thumb
 li{
   list-style-type: none;
 }
-body{
-  background-color: #eee;
-}
+
 :root{
   --bg-color:#28394b;
   --font-color:#d30231;

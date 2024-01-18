@@ -10,7 +10,7 @@ import {
   FaWhatsapp,
   FaRegEnvelope,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       {/*------------------- navbar start---------------------------  */}
-      <div className="sticky top-0 z-50 ">
+      <div className="sticky top-0 z-50">
         <div className="w-full bg-black flex justify-between py-2 px-4 sm:px-12 items-center sm:items-start">
         <div>
           <img
@@ -155,16 +155,18 @@ const Navbar = () => {
       <div
         className={
           isMobileNavOpen
-            ? "fixed left-0 top-0 w-[75%] h-screen sm:hidden ease-in duration-500 flex flex-col items-start gap-4 text-white bg-black uppercase text-lg py-4"
-            : "fixed left-[-100%] top-0 w-[75%] h-screen sm:hidden ease-in duration-500 flex flex-col items-start gap-4 text-white bg-black uppercase text-lg py-4"
+            ? "fixed z-[100] left-0 top-0 w-[75%] h-screen sm:hidden ease-in duration-500 flex flex-col items-start gap-4 text-white bg-black uppercase text-lg py-4"
+            : "fixed z-[100] left-[-100%] top-0 w-[75%] h-screen sm:hidden ease-in duration-500 flex flex-col items-start gap-4 text-white bg-black uppercase text-lg py-4"
         }
       >
-        <img
+        <Link to="">
+          <img
           className="w-32 sm:w-28 ml-4"
           src={softsynthlogo}
           alt="softsynth logo"
           
         />
+        </Link>
 
         <ul className="md:hidden flex flex-col px-2 gap-6">
           <li>
@@ -212,7 +214,7 @@ const Navbar = () => {
         </div>
       </div>
       {/*------------------- Mobile navbar end---------------------------  */}
-
+      {/* https://www.youtube.com/watch?v=dQ6RNltrXro */}
     </>
   );
 };
