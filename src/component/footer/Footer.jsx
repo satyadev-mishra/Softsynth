@@ -84,7 +84,7 @@ return (
         
     </footer>
     <div className="copyright-bar bg-gradient-to-r from-black to-[var(--font-color)] text-md py-4 text-white">
-        <p className='text-center'>&copy; 2023 : Made with ❤️ by Softsynth Software Solutions</p>
+        <p className='text-center'>&copy; 2024 : Made with ❤️ by Softsynth Software Solutions</p>
         <p className='hidden'>Gourav and Satyadev Mishra</p> 
     </div>
 </>
