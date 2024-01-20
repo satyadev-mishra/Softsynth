@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import softsynthlogo from "../../images/softsynthlogo.png";
 import { IoLocationOutline, IoMenu, IoClose } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
@@ -10,7 +10,11 @@ import {
   FaWhatsapp,
   FaRegEnvelope,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import gsap from "gsap";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+
 
 const Navbar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
