@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaAngleDown } from "react-icons/fa";
 
 const Accordion = ({ title, answer }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
@@ -11,7 +10,6 @@ const Accordion = ({ title, answer }) => {
         className="flex justify-between w-full"
       >
         <span className="text-lg font-medium">{title}</span>
-        {/* {accordionOpen ? <FaAngleDown className=" transition duration-200 ease-out"/> : <FaAngleDown className="transform rotate-180"/>} */}
         <svg
           className="fill-[var(--font-color)] shrink-0 ml-8"
           width="16"

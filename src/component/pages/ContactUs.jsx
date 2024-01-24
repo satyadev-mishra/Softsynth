@@ -14,7 +14,11 @@ const ContactUs = () => {
       <div className="flex flex-col sm:flex-row justify-around items-center mb-8">
         <div className="rounded-lg bg-white border py-6 px-4 shadow-lg w-[80%] sm:w-[35%]">
           <form>
-            <ContactInputBox type="text" name="name" placeholder="Your Name" />
+            <ContactInputBox 
+              type="text"
+              name="name" 
+              placeholder="Your Name" 
+            />
             <ContactInputBox
               type="text"
               name="email"
@@ -77,7 +81,7 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
 const ContactInputBox = ({ type, placeholder, name }) => {
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-4">  
         <input
           type={type}
           placeholder={placeholder}
