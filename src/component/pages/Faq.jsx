@@ -3,14 +3,16 @@ import Accordion from "../Accordions/Accordions";
 
 const FAQ = () => {
   return (
-    <div className="text-center">
-      <span className="block text-base font-semibold text-[var(--font-color)] ">
-        Faq's
-      </span>
-      <h2 className="text-[30px] font-bold capitalise text-black lg:text-[32px]">
-        Frequently Asked Questions
-      </h2>
-      <div className="w-1/2 my-4 p-4 mx-auto">
+    <>
+      <div className="text-center">
+        <span className="block text-base font-semibold text-[var(--font-color)] ">
+          Faq's
+        </span>
+        <h2 className="text-[30px] font-bold capitalise text-black lg:text-[32px]">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <div className="w-[90%] my-4 p-4 mx-auto text-left">
         <Accordion
           title="What are software outsourcing services?"
           answer="Software outsourcing is a remote service that is provided by software development companies. The service can consist of services ranging from full software or mobile application development, design development, testing, to project launch and project support. So, in the simplest words, software outsourcing services is all about hiring a developer or a development team that is external to your company staff to help create some digital product for your business."
@@ -70,7 +72,7 @@ const FAQ = () => {
           answer="We evaluate the result after every two weeks, we test our work (we conduct both development and acceptance tests), we present it to you, we apply your feedback so you know you get what you are paying for."
         />
       </div>
-    </div>
+    </>
   );
 };
 
