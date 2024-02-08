@@ -185,7 +185,7 @@ const Navbar = () => {
 
         {/*------------------- bottom navbar start---------------------------  */}
 
-        <div className="sticky top-0 z-50 w-full hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
+        <div className="sticky top-[-1px] z-50 w-full hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
           <ul className="flex items-center gap-2 py-2">
             <li ref={bottom_menu1}>
               <NavLink
