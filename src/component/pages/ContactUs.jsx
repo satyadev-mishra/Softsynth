@@ -1,24 +1,13 @@
 import React from "react";
-
+import Pagehead from "../pageHeader/Pagehead";
 const ContactUs = () => {
   return (
     <>
-      <div className="text-center mb-2">
-        <span className="block text-base font-semibold text-[var(--font-color)] ">
-          Faq's
-        </span>
-        <h2 className="text-3xl font-bold capitalise text-black">
-          Frequently Asked Questions
-        </h2>
-      </div>
+      <Pagehead pageName="Get in touch" pageDesc="/contact" />
       <div className="flex flex-col sm:flex-row justify-around items-center mb-8">
         <div className="rounded-lg bg-white border py-6 px-4 shadow-lg w-[80%] sm:w-[35%]">
           <form>
-            <ContactInputBox 
-              type="text"
-              name="name" 
-              placeholder="Your Name" 
-            />
+            <ContactInputBox type="text" name="name" placeholder="Your Name" />
             <ContactInputBox
               type="text"
               name="email"
@@ -62,7 +51,7 @@ const ContactUs = () => {
 
 export default ContactUs;
 
-const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
+const ContactTextArea = ({ row, placeholder, name }) => {
   return (
     <>
       <div className="mb-4">
@@ -71,14 +60,14 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
           placeholder={placeholder}
           name={name}
           className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-[var(--font-color)] dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-          defaultValue={defaultValue}
+          
         />
       </div>
     </>
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name }) => {
+export const ContactInputBox = ({ type, placeholder, name,pattern,maxLength}) => {
   return (
     <>
       <div className="mb-4">  
@@ -86,12 +75,17 @@ const ContactInputBox = ({ type, placeholder, name }) => {
           type={type}
           placeholder={placeholder}
           name={name}
+          pattern={pattern}
+          maxLength={maxLength}
+          
           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-[var(--font-color)] dark:border-dark-3 dark:bg-dark dark:text-dark-6"
         />
       </div>
     </>
   );
 };
+
+
 const ContactInputTelBox = ({
   type,
   placeholder,

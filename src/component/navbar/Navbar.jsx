@@ -131,7 +131,7 @@ const Navbar = () => {
     <>
       {/*-------------------top navbar start---------------------------  */}
      
-        <div className="w-full bg-black flex justify-between py-2 px-4 sm:px-12 items-center sm:items-start">
+        <div className="w-full bg-black flex justify-between py-2 px-6 sm:px-12 items-center sm:items-start">
           <div>
             <img
               ref={logo}

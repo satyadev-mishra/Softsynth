@@ -7,7 +7,7 @@ import {IoLocationOutline} from "react-icons/io5";
 const Footer = () => {
 return (
 <>
-<footer className='bg-black w-full text-white px-3 sm:px-16 pb-8'>
+<footer className='bg-black w-full text-white px-6 sm:px-16 pb-8'>
         <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between border-b-2 border-solid border-gray-800 pb-4 ">
             <img src={softsynthlogo} alt="Softsynth Logo" className='w-[200px] pt-4' />
             <div className="md:flex md:items-center">

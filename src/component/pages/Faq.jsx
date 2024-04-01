@@ -1,17 +1,10 @@
 import React from "react";
 import Accordion from "../Accordions/Accordions";
-
+import Pagehead from "../pageHeader/Pagehead";
 const FAQ = () => {
   return (
     <>
-      <div className="text-center">
-        <span className="block text-base font-semibold text-[var(--font-color)] ">
-          Faq's
-        </span>
-        <h2 className="text-[30px] font-bold capitalise text-black lg:text-[32px]">
-          Frequently Asked Questions
-        </h2>
-      </div>
+      <Pagehead pageName="Frequently Asked Questions" pageDesc="/faq" />
       <div className="w-[90%] my-4 p-4 mx-auto text-left">
         <Accordion
           title="What are software outsourcing services?"
