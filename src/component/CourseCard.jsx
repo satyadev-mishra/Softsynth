@@ -5,7 +5,7 @@ const CourseCard = (props) => {
         <img
           src={props.src}
           alt={props.alt}
-          className="h-[45%] w-full rounded-md object-cover object-center  p-4"
+          className="h-[220px] w-[420px] rounded-md object-cover object-center  p-4"
         />
         <div className="p-4">
           <h1 className="text-xl font-bold">{props.courseTitle}</h1>

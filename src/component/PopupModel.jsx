@@ -2,11 +2,11 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 import { ContactInputBox } from "./pages/ContactUs";
 
-const Demo = (props) => {
+const PopupModel = (props) => {
   return (
     <>
       <div className="flex items-center bg-[#000000be] justify-center fixed top-0 left-0 right-0 bottom-0 z-[999]">
-        <div className="flex items-center justify-center bg-gray-300 w-[40%] h-[50vh] rounded-md border-l-4 border-[var(--font-color)] relative p-4">
+        <div className="flex items-center justify-center bg-gray-300 w-[320px] h-[50vh] rounded-md border-l-4 border-[var(--font-color)] relative p-4">
           <div>
             <ContactInputBox type="text" name="name" placeholder="Your Name" />
             <ContactInputBox
@@ -34,11 +34,14 @@ const Demo = (props) => {
               <option value="Java">CSS</option>
               <option value="Java">JavaScript</option>
             </select>
+            <button className="w-full mt-4 rounded-md bg-[var(--font-color)] py-2 text-lg font-semibold text-white shadow-sm hover:bg-black">
+              Submit
+            </button>
           </div>
           <div>
-            <IoClose 
+            <IoClose
               onClick={() => props.hideModel()}
-              class="h-8 w-8 cursor-pointer text-black absolute top-1 right-4 hover:text-[var(--font-color)]"
+              class="h-8 w-8 cursor-pointer text-black absolute top-[2px] right-[1px] hover:text-[var(--font-color)]"
             />
           </div>
         </div>
@@ -47,6 +50,6 @@ const Demo = (props) => {
   );
 };
 
-export default Demo;
+export default PopupModel;
 
 
