@@ -2,7 +2,7 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 import { ContactInputBox } from "./pages/ContactUs";
 
-const Demo = () => {
+const Demo = (props) => {
   return (
     <>
       <div className="flex items-center bg-[#000000be] justify-center fixed top-0 left-0 right-0 bottom-0 z-[999]">
@@ -36,7 +36,10 @@ const Demo = () => {
             </select>
           </div>
           <div>
-            <IoClose class="h-8 w-8 cursor-pointer text-black absolute top-1 right-4 hover:text-[var(--font-color)]" />
+            <IoClose 
+              onClick={() => props.hideModel()}
+              class="h-8 w-8 cursor-pointer text-black absolute top-1 right-4 hover:text-[var(--font-color)]"
+            />
           </div>
         </div>
       </div>
