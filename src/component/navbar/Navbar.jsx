@@ -42,31 +42,31 @@ const Navbar = () => {
 
   useGSAP(
     () => {
-      gsap.from(logo.current, {
-        opacity: 0,
-        y: "100",
-        stagger: 0.1,
-      });
-      gsap.to(logo.current, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power4.Out",
-      });
-      gsap.from([top_icon1.current, top_icon2.current, top_icon3.current], {
-        opacity: 0,
-        y: "-200",
-        duration: 1,
-        // ease:"power4.out",
-        stagger: 0.3,
-      });
-      gsap.to([top_icon1.current, top_icon2.current, top_icon3.current], {
-        opacity: 1,
-        y: "0",
-        duration: 1,
-        ease: "power4.out",
-        stagger: 0.5,
-      });
+      // gsap.from(logo.current, {
+      //   opacity: 0,
+      //   y: "100",
+      //   stagger: 0.1,
+      // });
+      // gsap.to(logo.current, {
+      //   opacity: 1,
+      //   y: 0,
+      //   duration: 1,
+      //   ease: "power4.Out",
+      // });
+      // gsap.from([top_icon1.current, top_icon2.current, top_icon3.current], {
+      //   opacity: 0,
+      //   y: "-200",
+      //   duration: 1,
+      //   // ease:"power4.out",
+      //   stagger: 0.3,
+      // });
+      // gsap.to([top_icon1.current, top_icon2.current, top_icon3.current], {
+      //   opacity: 1,
+      //   y: "0",
+      //   duration: 1,
+      //   ease: "power4.out",
+      //   stagger: 0.5,
+      // });
       // bottom navbar animation
 
       gsap.from(
@@ -130,7 +130,7 @@ const Navbar = () => {
   return (
     <>
       {/*-------------------top navbar start---------------------------  */}
-     
+{/*      
         <div className="w-full bg-black flex justify-between py-2 px-6 sm:px-12 items-center sm:items-start">
           <div>
             <img
@@ -144,7 +144,7 @@ const Navbar = () => {
           <div className="hidden sm:flex items-start gap-2 text-white">
             <div className="flex item-center" ref={top_icon1}>
               <IoLocationOutline className="text-[40px] text-[var(--font-color)]" />
-              <div>
+           <div>
                 <h1 className="text-xl">Address</h1>
                 <p className="text-sm">SCF-165, First Floor,</p>
                 <p className="text-sm">sector-9, Faridabad</p>
@@ -180,13 +180,14 @@ const Navbar = () => {
               onClick={showMobileNav}
             />
           )}
-        </div>
+        </div> */}
         {/*------------------- top navbar end---------------------------  */}
 
         {/*------------------- bottom navbar start---------------------------  */}
 
         <div className="sticky top-[-1px] z-50 w-full hidden py-2 bg-gradient-to-r from-black to-[var(--font-color)] text-white uppercase sm:flex items-center justify-between px-10 ">
-          <ul className="flex items-center gap-2 py-2">
+          <img src={softsynthlogo} alt="" className="w-20" />
+          <ul className="flex items-center w-[50%] justify-between  ">
             <li ref={bottom_menu1}>
               <NavLink
                 to="/"
@@ -203,6 +204,7 @@ const Navbar = () => {
                 About
               </NavLink>
             </li>
+           
             <li ref={bottom_menu3}>
               <NavLink
                 to="/courses"

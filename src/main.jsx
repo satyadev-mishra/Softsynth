@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 // Pages....
 import Home from './component/pages/Home';
-import About from './component/pages/About';
+import About from './component/pages/About/About.jsx';
 import Courses from './component/pages/Courses';
 import ApplyInternship from './component/pages/ApplyInternship';
 import Faq from './component/pages/Faq';
 import ContactUs from './component/pages/ContactUs';
 import PageNotFound from './component/pages/PageNotFound.jsx';
+import SinglePost from './component/pages/courses/SinglePost.jsx';
 import './index.css'
 import {createBrowserRouter,
   createRoutesFromElements,
@@ -23,8 +24,12 @@ const router = createBrowserRouter(
       <Route path="about" element={<About/>}/>
       <Route path="internship" element={<ApplyInternship/>}/>
       <Route path="courses" element={<Courses/>}/>
+      
+        
       <Route path="faq" element={<Faq/>}/>
       <Route path="contact" element={<ContactUs/>}/>
+      <Route path='courses/singlepost' element={<SinglePost/>}/>
+      
       <Route path="*" element={<PageNotFound/>}/>
     </Route>
   )

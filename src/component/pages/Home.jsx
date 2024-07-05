@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import bg from "../../images/bg.png";
+import career from "../../images/career.png";
+import assessment from "../../images/assessment.png"
+import card4 from "../../images/card4.jpg"
+import card5 from "../../images/card5.jpg"
+import card6 from "../../images/card6.jpg"
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import Aboutpage1 from "./About/Aboutpage1";
 
 const Home = () => {
   const container = useRef(null);
@@ -29,24 +35,23 @@ const Home = () => {
   return (
     <div className="homepage">
       {/* home page */}
-      <div className="w-[100%] h-auto flex flex-col items-start sm:flex-row justify-between bg-[linear-gradient(#c5daf2,#fbdce9)] ">
-        <div className="sm:w-[50%] flex flex-col gap-6 justify-center items-start px-6  my-6 ">
+      <div className="w-[100%] h-auto lg:flex-row   flex flex-col items-start sm:flex-row justify-between bg- ">
+        <div className="sm:w-[50%] flex flex-col gap-4 justify-center items-start px-6  my-6 ">
           <p ref={pText1} className="text-xl text-[#414141] font-semibold">
-            Make your passion come true
+            MAKE YOUR PASSION COME TRUE
           </p>
           <div ref={headText}>
-            <h1 className="text-5xl sm:text-7xl text-[var(--font-color)] font-semibold">
-              FIND YOUR <br /> IDEAL CAREER
+            <h1 className="text-8xl  text-[var(--font-color)] font-semibold">
+              FIND YOUR IDEAL CAREER
             </h1>
           </div>
           <h2 ref={pText2} className="text-xl text-[#414141]">
-            Are you stuck in a job you don’t enjoy? Not sure which career
-            direction to take? If you want to have a job you are passionate
-            about, well, you can!
+            Are you stuck in a job you don't enjoy? Not sure which career direction to take? If you want
+            to have a job you are passionate about, well, you can!  
           </h2>
           <div
             ref={btn}
-            className="flex justify-center sm:justify-start w-full mt-12"
+            className="flex justify-center sm:justify-start w-full mt-10"
           >
             <Link to="/internship">
               <button className="bg-[var(--font-color)] text-white text-l mr-4 w-36 h-11 rounded-[30px]">
@@ -62,18 +67,72 @@ const Home = () => {
         </div>
         {/* left home section  */}
         <div className="w-[100%] sm:w-[50%]  flex justify-center items-center ">
-          {/* <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#FF0066" d="M57,-58.3C70.1,-44,74.2,-22,73.2,-1.1C72.1,19.9,65.8,39.7,52.8,52.1C39.7,64.5,19.9,69.5,-0.4,69.9C-20.6,70.2,-41.2,66,-57.3,53.6C-73.4,41.2,-85,20.6,-82.7,2.3C-80.4,-16,-64.1,-31.9,-48,-46.3C-31.9,-60.6,-16,-73.3,3,-76.3C22,-79.3,44,-72.6,57,-58.3Z" transform="translate(100 100)" />
-          </svg> */}
+       
           <img
-            className="w-[80%] h-auto scale-x-100 overflow-hidden mb-1 object-contain"
+            className="w-[80%] h-[100%] scale-x-100 overflow-hidden object-fit"
             src={bg}
             alt=""
           />
         </div>
       </div>
+      <Aboutpage1/>
       {/*  second page  */}
+      
+      {/* second page end  */}
+     
+    
+       {/* third page start  */}
+       <section className="text-gray-600 body-font">
+  <div className="container px-5 py-24 mx-auto ">
+    <div className="flex justify-center flex-col items-center mb-20 ">
+      <h1 className="text-4xl w-[50%] text-center text-[var(--font-color)]  ">Career you’re passionate</h1>
+<h1 className="text-4xl  text-center mb-10 border-b-4 border-[var(--font-color)] p-4 ">about is there for you</h1>
+<p className="w-[70%] text-center">Whether your focus is on determining career direction, conducting a job search or improving work performance, you will have access to one of our expert career consultants and career tools.</p>
     </div>
+    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+      <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+       
+          <img className="w-1/2" src={career} alt="" />
+       
+      </div>
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Career coaching</h2>
+        <p className="leading-relaxed text-base">When it comes to your career management, having a professional career coach at your side is a key element to your support system.</p>
+       
+      </div>
+    </div>
+    <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Assesments</h2>
+        <p className="leading-relaxed text-base">The right career assessment and expert interpretation will provide you with invaluable insight into who you are and your next move.</p>
+        
+      </div>
+      <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+      
+        <img className="w-1/2" src={assessment} alt="" />
+      </div>
+    </div>
+    <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+      <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+        
+        <img className="w-1/2" src="https://cdn-icons-png.flaticon.com/512/10342/10342446.png" alt="" />
+      </div>
+      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Interview coaching</h2>
+        <p className="leading-relaxed text-base">Prepare with strategy and practice so you are ready for anything, present the best you, and stand out in the crowd.</p>
+      
+      </div>
+    </div>
+   
+  </div>
+</section>
+{/* third page end  */}
+      
+      
+      
+    </div>
+    
+
   );
 };
 
